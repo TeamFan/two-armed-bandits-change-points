@@ -1,0 +1,113 @@
+{
+  "hoeffding": {
+    "replications": 200,
+    "seconds": 0.7,
+    "mc_samples": 200000
+  },
+  "ucb": {
+    "replications": 200,
+    "seconds": 9.0,
+    "total_violations": 0
+  },
+  "estimation": {
+    "replications": 200,
+    "seconds": 6.7,
+    "rows": [
+      {
+        "window": 200,
+        "runs": 200,
+        "delta": 0.05,
+        "runs_with_violation": 0,
+        "max_err_over_bound": 0.6966422182748592,
+        "max_bias_excess": 4.768371575369912e-08
+      },
+      {
+        "window": 1000,
+        "runs": 200,
+        "delta": 0.05,
+        "runs_with_violation": 0,
+        "max_err_over_bound": 0.8225096354290825,
+        "max_bias_excess": 4.768371575369912e-08
+      },
+      {
+        "window": 3000,
+        "runs": 200,
+        "delta": 0.05,
+        "runs_with_violation": 0,
+        "max_err_over_bound": 0.8929200748259395,
+        "max_bias_excess": 4.768371575369912e-08
+      }
+    ]
+  },
+  "window": {
+    "replications": 200,
+    "seconds": 82.5
+  },
+  "noise_coverage": {
+    "replications": 200,
+    "seconds": 3.4,
+    "mc_samples": 400000
+  },
+  "noise_window": {
+    "replications": 200,
+    "seconds": 62.5
+  },
+  "budget": {
+    "replications": 200,
+    "seconds": 26.9,
+    "E": 60000.0,
+    "h": 2000,
+    "rho_uniform": 0.13333333333333333
+  },
+  "config": {
+    "T": 30000,
+    "tau1": 10000,
+    "tau2": 20000,
+    "base_seed": 20260929,
+    "numpy": "2.4.6",
+    "scenarios": {
+      "S1": [
+        [
+          0.7,
+          0.4
+        ],
+        [
+          0.1,
+          0.4
+        ],
+        [
+          0.75,
+          0.45
+        ]
+      ],
+      "S2": [
+        [
+          0.7,
+          0.4
+        ],
+        [
+          0.3,
+          0.4
+        ],
+        [
+          0.9,
+          0.3
+        ]
+      ],
+      "S3": [
+        [
+          0.6,
+          0.4
+        ],
+        [
+          0.1,
+          0.4
+        ],
+        [
+          0.5,
+          0.8
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=2.4cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\graphicspath{{../results/figures/}}
+\captionsetup{font=small,labelfont=bf}
+\setlength{\emergencystretch}{2em}
+\newtheorem{proposition}{Proposition}
+\numberwithin{equation}{section}
+
+\title{Two-Armed Stochastic Bandits\\with Change Points and Noisy Observations}
+\author{Xiangyu Luo}
+\date{Written solution: 29 September 2026 \quad Numerical study: October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A two-armed bandit with two known change points is studied in four steps: a Hoeffding bound for sub-Gaussian means, a UCB algorithm with an $O(\log\tau_1/\Delta)$ high-probability regret bound in the first phase, error bounds for a sliding-window estimator whose window mixes up to three phases, and confidence bounds and budget allocation when every observation carries Laplace noise. Sections~\ref{sec:setting}--\ref{sec:noise} give the written solution. Section~\ref{sec:experiments} adds a reproducible numerical study: it checks every bound by simulation, turns the discussion of part~(c)(iii) into a comparison of window sizes and change-aware variants, and measures how Laplace noise and the allocation of a fixed budget shift the best window. The code is in the accompanying repository (\texttt{src/}); every number in Section~\ref{sec:experiments} is produced by \texttt{src/run\_experiments.py}.
+\end{abstract}
+
+\tableofcontents
+
+\input{theory}
+\input{experiments}
+
+\end{document}
